@@ -153,7 +153,7 @@ main {
         flex: 1;
         min-width: 50%;
         max-width: 50%;
-        padding: 20px;
+        padding: 15px;
       }
     }
   }
@@ -161,6 +161,7 @@ main {
   .history-section {
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 100px;
     
     .history-header {
       padding-top: 20px;
@@ -227,9 +228,15 @@ main {
 
           li {
 
-            
-            img {
-              width: 100%;
+            button {
+              border: none;
+              padding: 0;
+              margin: 0;
+              background-color: transparent;
+
+              img {
+                width: 100%;
+              }
             }
           }
         }
@@ -239,24 +246,49 @@ main {
     .history-timeline {
       .history-timeline-list {
         margin-top: 20px;
+        margin-bottom: 100px;
 
         ul {
           list-style-type: none;
           padding: 0;
+          max-height: 550px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+
+          @media (max-width: 850px) {
+            max-height: 100%;
+          }
+
+          &.collapsed {
+            max-height: 350px;
+            overflow: hidden;
+          }
 
           li {
             display: flex;
             flex-direction: row;
             align-items: baseline;
             margin-bottom: 20px;
+            width: 50%;
+
+            @media (max-width: 850px) {
+              width: 100%;
+            }
 
             .timeline-list-year {
               font-size: 1.2rem;
               font-weight: 700;
+
+              @media (max-width: 600px) {
+                font-size: 1rem;
+              }
             }
 
             .timeline-list-description {
               margin-left: 20px;
+              margin-right: 20px;
+
               h4, p {
                 margin: 0;
                 padding: 0;
@@ -264,17 +296,25 @@ main {
 
               h4 {
                 font-size: 1.2rem;
+
+                @media (max-width: 600px) {
+                  font-size: 1rem;
+                }
               }
 
               p {
                 max-width: 600px;
                 flex-wrap: wrap;
+
+                @media (max-width: 600px) {
+                  font-size: 0.8rem;
+                }
               }
             }
           }
         }
 
-        .readmore-button-container {
+        .viewmore-button-container {
           margin-top: 50px;
           margin-bottom: 100px;
 
@@ -285,6 +325,15 @@ main {
             border-radius: 10px;
             display: block;
             margin: 0 auto;
+
+            @media (max-width: 600px) {
+              font-size: 0.8rem;
+            }
+
+            &.activated {
+              background-color: black;
+              color: white;
+            }
           }
         }
       }
@@ -305,15 +354,30 @@ main {
       padding-left: 20px;
       padding-right: 20px;
 
+      @media (max-width: 610px) {
+        flex-direction: column;
+      }
+
       .left {
         flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
 
+        @media (max-width: 610px) {
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
         h4 {
           margin: 0;
           font-size: 2.5rem;
+
+          @media (max-width: 610px) {
+            font-size: 1.5rem;
+          }
         }
       }
 
@@ -322,6 +386,10 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 610px) {
+          justify-content: flex-start;
+        }
 
         .right-inner {
           h4, p, a {
@@ -332,6 +400,9 @@ main {
           h4 {
             font-size: 1.3rem;
 
+            @media (max-width: 610px) {
+              font-size: 1rem;
+            }
           }
 
           a {
@@ -346,5 +417,17 @@ main {
         }
       }
     }
+  }
+}
+
+footer {
+  margin: 0 auto;
+  max-width: 1200px;
+
+  .footer-information {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #333;
   }
 }
