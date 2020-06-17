@@ -504,13 +504,26 @@ main {
             }
           }
 
+          p {
+            font-size: 0.9rem;
+
+            @media (max-width: 610px) {
+              font-size: 0.8rem;
+            }
+          }
+
           a {
             text-decoration: none;
             color: #5CA7FF;
+            font-size: 0.9rem;
 
             &:hover,
             &:focus {
               text-decoration: underline;
+            }
+
+            @media (max-width: 610px) {
+              font-size: 0.8rem;
             }
           }
         }
