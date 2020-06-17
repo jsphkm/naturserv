@@ -41,6 +41,7 @@ main {
           background-position: center;
           min-height: 360px;
           position: relative;
+          filter: contrast(115%);
 
           @media (max-width: 600px) {
             min-height: 200px;
