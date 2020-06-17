@@ -325,8 +325,12 @@ main {
 
     .history-timeline {
       .history-timeline-list {
-        margin-top: 20px;
+        margin-top: 34px;
         margin-bottom: 100px;
+
+        @media (max-width: 600px) {
+          margin-top: 20px;
+        }
 
         ul {
           list-style-type: none;
