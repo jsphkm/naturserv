@@ -39,7 +39,7 @@ main {
           position: relative;
 
           @media (max-width: 600px) {
-            min-height: 230px;
+            min-height: 200px;
           }
 
           .overlay {
@@ -80,7 +80,7 @@ main {
               font-weight: 700;
 
               @media (max-width: 600px) {
-                font-size: 1.2rem;
+                font-size: 1rem;
               }
             }
 
@@ -92,7 +92,7 @@ main {
               width: 150px;
 
               @media (max-width: 600px) {
-                width: 90px;
+                width: 70px;
               }
             }
           }
@@ -126,7 +126,8 @@ main {
               bottom: 12px;
 
               @media (max-width: 600px) {
-                max-width: 120px;
+                max-width: 80px;
+                bottom: 6px;
               }
             }
           }
@@ -140,7 +141,7 @@ main {
               font-weight: 700;
 
               @media (max-width: 600px) {
-                font-size: 1rem;
+                font-size: 0.7rem;
               }
 
                ul {
@@ -166,7 +167,7 @@ main {
         margin: 0 auto;
 
         @media (max-width: 600px) {
-          max-width: 200px;
+          max-width: 160px;
         }
       }
     }
@@ -222,6 +223,10 @@ main {
         .history-image-container {
           img {
             width: 70px;
+
+            @media (max-width: 600px) {
+              width: 45px;
+            }
           }
         }
         
@@ -235,6 +240,10 @@ main {
           
           h2 {
             font-size: 1.7rem;
+
+            @media (max-width: 600px) {
+              font-size: 1.3rem;
+            }
           }
           
           p {
@@ -242,6 +251,10 @@ main {
             font-weight: 600;
             font-style: italic;
             color: #38761D;
+
+            @media (max-width: 600px) {
+              font-size: 1rem;
+            }
           }
         }
       }
@@ -302,6 +315,10 @@ main {
           flex-direction: column;
           flex-wrap: wrap;
 
+          @media (max-width: 460px) {
+            max-height: 328px;
+          }
+
           @media (max-width: 850px) {
             max-height: 100%;
           }
@@ -309,6 +326,10 @@ main {
           &.collapsed {
             max-height: 350px;
             overflow: hidden;
+
+            @media (max-width: 461px) {
+              max-height: 220px;
+            }
           }
 
           li {
@@ -434,7 +455,10 @@ main {
         align-items: center;
 
         @media (max-width: 610px) {
+          display: flex;
           justify-content: flex-start;
+          flex-direction: column;
+          align-items: flex-start;
         }
 
         .right-inner {
