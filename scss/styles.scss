@@ -314,6 +314,10 @@ main {
               margin: 0;
               background-color: transparent;
 
+              &:hover, &:focus {
+                cursor: pointer;
+              }
+
               img {
                 width: 100%;
               }
