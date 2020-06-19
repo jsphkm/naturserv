@@ -5,6 +5,6 @@ function changeImage(e) {
 
 function toggleCollapseHistory(e) {
   e.classList.toggle('activated');
-
+  e.innerHTML = e.innerHTML === 'View more' ? 'View less' : 'View more';
   document.getElementById('history-ul').classList.toggle('collapsed');
 }
